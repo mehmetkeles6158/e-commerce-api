@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get "/coffeetable", controller:"products", action:"second_product"
 
+  get "/allproducts", controller:"products", action:"all_products"
+
 
 
 end

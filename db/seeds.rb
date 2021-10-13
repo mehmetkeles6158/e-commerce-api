@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+20.times do
+
+  product3 = Product.new(name:Faker::Coffee.blend_name,price:Faker::Number.decimal(l_digits: 2),image_url:Faker::Coffee.origin, description:Faker::Coffee.notes)
+
+  product3.save
+  
+end
