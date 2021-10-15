@@ -1,12 +1,8 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  get "/first_product", controller: "products", action:"first_product"
-
-  get "/coffeetable", controller:"products", action:"second_product"
-
-  get "/allproducts", controller:"products", action:"all_products"
-
+  get "/products" => "products#index"
+  get "/products/:id" => "products#show"
 
 
 end

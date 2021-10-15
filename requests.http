@@ -1,9 +1,5 @@
-GET http://localhost:3000/first_product.json
+GET http://localhost:3000/products
 
 ###
 
-GET http://localhost:3000/coffeetable.json
-
-###
-
-GET http://localhost:3000/allproducts.json
+GET http://localhost:3000/products/2
