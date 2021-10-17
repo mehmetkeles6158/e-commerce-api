@@ -44,10 +44,10 @@ class ProductsController < ApplicationController
     # product.image_url = "macbookpro.png"
     # product.description = "It is good laptop for programming"
 
-    product.name = params[:name]
-    product.price = params[:price]
-    product.image_url = params[:image_url]
-    product.description = params[:description]
+    product.name = params[:name] || product.name
+    product.price = params[:price] || product.price
+    product.image_url = params[:image_url] || product.image_url
+    product.description = params[:description] || product.description
     product.save
 
     render json: product.as_json

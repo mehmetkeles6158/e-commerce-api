@@ -22,8 +22,6 @@ PATCH http://localhost:3000/products/1
 Content-Type: application/json
 
 {
-  "name": "Book-case",
-  "price": "399",
-  "url": "https://imageresizer.furnituredealer.net/img/remote/images.furnituredealer.net/img/products%2fcoaster%2fcolor%2fbookcases%20-%20coaster_801236-b1.jpg?width=878&height=600&scale=both&trim.threshold=80",
-  "description": "This bookcase is the perfect addition to your living room or study to provide extra storage space. "
+  "description": "Max out your midcentury modern design with this wooden bookcase."
+  
 } 
