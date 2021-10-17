@@ -22,6 +22,11 @@ PATCH http://localhost:3000/products/1
 Content-Type: application/json
 
 {
-  "description": "Max out your midcentury modern design with this wooden bookcase."
+  "price": 349
   
 } 
+
+
+###
+
+DELETE http://localhost:3000/products/25
