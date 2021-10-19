@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
   "input_name": "TV Stand",
-  "input_price": "199",
+  "input_price": 199,
   "input_url": "tv_stand.png",
   "input_description": "It is stylish"
 } 
