@@ -27,9 +27,7 @@ class ProductsController < ApplicationController
       image_url: params[:input_url],
       description: params[:input_description]
     )
-
     product.save
-
     render json: product.as_json
     
   end
@@ -48,7 +46,6 @@ class ProductsController < ApplicationController
     product.image_url = params[:image_url] || product.image_url
     product.description = params[:description] || product.description
     product.save
-
     render json: product.as_json
     
   end
@@ -57,7 +54,6 @@ class ProductsController < ApplicationController
     
     product = Product.find_by(id: params[:id])
     product.destroy
-
     render json: product.as_json
   end
 

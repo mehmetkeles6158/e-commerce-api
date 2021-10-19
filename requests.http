@@ -8,10 +8,10 @@ POST http://localhost:3000/products/
 Content-Type: application/json
 
 {
-  "input_name": "TV Stand",
-  "input_price": 199,
-  "input_url": "tv_stand.png",
-  "input_description": "It is stylish"
+  "input_name": "Dining Table",
+  "input_price": 1760,
+  "input_url": "https://secure.img1-fg.wfcdn.com/im/78527195/resize-h800-w800%5Ecompr-r85/4504/45042205/Jambusaria+Vintage+Factory+Coffee+Table.jpg",
+  "input_description": "Iron and wood couch table is a first-rate example of industrial furniture design. An artful blending of metal and reclaimed wood, this industrial design Jambusaria Vintage Factory Cart Coffee Table will be the centerpiece of any room."
 } 
 
 ###
