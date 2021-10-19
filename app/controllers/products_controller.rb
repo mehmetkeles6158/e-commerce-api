@@ -3,8 +3,8 @@ class ProductsController < ApplicationController
   def index
 
     p_all = Product.all
-
-    render json:p_all.as_json
+    render json:p_all.as_json(methods:[:is_discounted?,:tax,:total])
+    #render json:p_all.as_json
    
   end
 

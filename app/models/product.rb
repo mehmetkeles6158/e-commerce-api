@@ -17,6 +17,7 @@ class Product < ApplicationRecord
 
   def total
     price + tax
+    p "This product' price is #{ price + tax} including tax!"
   end
 
 
