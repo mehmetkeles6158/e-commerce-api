@@ -1,15 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-20.times do
-
-  product3 = Product.new(name:Faker::Coffee.blend_name,price:Faker::Number.decimal(l_digits: 2),image_url:Faker::Coffee.origin, description:Faker::Coffee.notes)
-
-  product3.save
-  
-end
+Product.create!([
+  {name: "Tv Stand", price: "299.0", image_url: "https://static.povison.com/fit-in/1000x1000/media/catalog/product/t/s/ts-wns01-20_1.jpg?width=1000&height=1000&store=default&image-type=image", description: "\"It fits into your study, bedroom, living room, office etc; suits most TVs.\"", inventory: nil},
+  {name: "Dining Table", price: "420.0", image_url: "https://secure.img1-fg.wfcdn.com/im/63715748/resize-h445%5Ecompr-r85/4055/40556590/Marie+Dining+Table.jpg", description: "Dining tables are the center of attention in your dining area – they hold food and drinks during parties and everyone ends up sitting around them and talking. Don’t let your table get the wrong kind of attention, upgrade your dining experience with this table.", inventory: nil},
+  {name: "Dining Table", price: "1760.0", image_url: "https://secure.img1-fg.wfcdn.com/im/78527195/resize-h800-w800%5Ecompr-r85/4504/45042205/Jambusaria+Vintage+Factory+Coffee+Table.jpg", description: "Iron and wood couch table is a first-rate example of industrial furniture design. An artful blending of metal and reclaimed wood, this industrial design Jambusaria Vintage Factory Cart Coffee Table will be the centerpiece of any room.", inventory: nil},
+  {name: "Dining Table", price: "1760.0", image_url: "https://secure.img1-fg.wfcdn.com/im/78527195/resize-h800-w800%5Ecompr-r85/4504/45042205/Jambusaria+Vintage+Factory+Coffee+Table.jpg", description: "Iron and wood couch table is a first-rate example of industrial furniture design. An artful blending of metal and reclaimed wood, this industrial design Jambusaria Vintage Factory Cart Coffee Table will be the centerpiece of any room.", inventory: nil},
+  {name: "Macbook Pro", price: "1199.0", image_url: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6418/6418603_sd.jpg;maxHeight=640;maxWidth=550", description: "It is good laptop for programming and creating projects", inventory: nil},
+  {name: "Desk Lamp", price: "129.0", image_url: "https://assets.pbimgs.com/pbimgs/rk/images/dp/wcm/202125/0179/img66z.jpg", description: "Carlisle 29\" Desk Lamp", inventory: nil},
+  {name: "Walnut Bookcase", price: "349.0", image_url: "https://mobileimages.lowes.com/productimages/ae23b265-3020-495b-b54e-78c8d42ea3c4/13198413.jpg", description: "Max out your midcentury modern design with this wooden bookcase.", inventory: nil}
+])

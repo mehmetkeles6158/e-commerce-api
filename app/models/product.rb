@@ -1,5 +1,10 @@
 class Product < ApplicationRecord
 
+  validates :name, presence: true
+  validates :price, numericality: {greater_than: 0}
+  validates :description, length: { in: 10..500}
+  validates :name, uniqueness: true
+
 
   def is_discounted?
 
@@ -17,7 +22,7 @@ class Product < ApplicationRecord
 
   def total
     price + tax
-    p "This product' price is #{ price + tax} including tax!"
+    p "This product' price is $#{ price + tax} including tax!"
   end
 
 
