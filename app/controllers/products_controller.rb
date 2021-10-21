@@ -28,8 +28,13 @@ class ProductsController < ApplicationController
       image_url: params[:input_url],
       description: params[:input_description]
     )
-    product.save
-    render json:product
+
+    if product.save
+      render json: product.as_json
+    else
+      render json: {errors: product.errors.full_messages}
+    end
+    
     
   end
 
@@ -37,17 +42,16 @@ class ProductsController < ApplicationController
     the_id = params[:id]
     product = Product.find_by(id: the_id)
     
-    # product.name = "Macbook Pro"
-    # product.price = 1199
-    # product.image_url = "macbookpro.png"
-    # product.description = "It is good laptop for programming"
-
     product.name = params[:name] || product.name
     product.price = params[:price] || product.price
     product.image_url = params[:image_url] || product.image_url
     product.description = params[:description] || product.description
-    product.save
-    render json: product
+
+    if product.save
+      render json: product.as_json
+    else
+      render json: {errors: product.errors.full_messages}
+    end
     
   end
 
