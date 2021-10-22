@@ -19,6 +19,7 @@ class SuppliersController < ApplicationController
       phone_number: params[:phone_number]
     )
     supplier.save
+    render json:supplier
   end
 
 end
