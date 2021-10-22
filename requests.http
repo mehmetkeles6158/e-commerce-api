@@ -30,3 +30,20 @@ DELETE http://localhost:3000/products/3
 
 GET http://localhost:3000/suppliers
 
+###
+
+GET http://localhost:3000/suppliers/1
+
+
+###
+POST http://localhost:3000/suppliers
+Content-Type: application/json
+
+{
+  "name" : "Ali Depot",
+  "email": "alidepot@info.com",
+  "phone_number": "222-333-4444"
+}
+
+
+

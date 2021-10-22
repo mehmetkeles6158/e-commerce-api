@@ -4,9 +4,21 @@ class SuppliersController < ApplicationController
     render json:supplier_all
   end
 
-  def create
-    Supplier.new(
-      
-    )
+  def show
+    the_id = params[:id]
+    supplier = Supplier.find_by(id:the_id)
+    render json:supplier
+  
+    
   end
+
+  def create
+    supplier = Supplier.new(
+      name: params[:name],
+      email: params[:email],
+      phone_number: params[:phone_number]
+    )
+    supplier.save
+  end
+
 end
