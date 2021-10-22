@@ -19,14 +19,11 @@ class ProductsController < ApplicationController
   end
 
   def create
-
-    # product = Product.new(name:"IPAD PRO", price:799, image_url:"table.png", description:"it is a cool tablet for sketching your projects professionally")
-
     product = Product.new(
-      name: params[:input_name],
-      price: params[:input_price],
-      image_url: params[:input_url],
-      description: params[:input_description]
+      name: params[:name],
+      price: params[:price],
+      image_url: params[:url],
+      description: params[:description]
     )
 
     if product.save
@@ -35,13 +32,11 @@ class ProductsController < ApplicationController
       render json: {errors: product.errors.full_messages}
     end
     
-    
   end
 
   def update
     the_id = params[:id]
     product = Product.find_by(id: the_id)
-    
     product.name = params[:name] || product.name
     product.price = params[:price] || product.price
     product.image_url = params[:image_url] || product.image_url
