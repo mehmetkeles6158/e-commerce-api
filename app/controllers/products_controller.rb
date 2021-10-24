@@ -22,13 +22,12 @@ class ProductsController < ApplicationController
     product = Product.new(
       name: params[:name],
       price: params[:price],
-      image_url: params[:url],
       description: params[:description],
       supplier_id: params[:supplier_id]
     )
 
     if product.save
-      render json: product.as_json
+      render json: product
     else
       render json: {errors: product.errors.full_messages}
     end
@@ -44,7 +43,7 @@ class ProductsController < ApplicationController
     product.description = params[:description] || product.description
 
     if product.save
-      render json: product.as_json
+      render json: product
     else
       render json: {errors: product.errors.full_messages}
     end

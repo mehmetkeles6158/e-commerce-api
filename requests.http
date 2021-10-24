@@ -8,11 +8,11 @@ POST http://localhost:3000/products/
 Content-Type: application/json
 
 {
-  "name": "Dining Table",
-  "price": -170,
+  "name": "Walnut Drawer",
+  "price": 170,
   "image_url": "https://secure.img1-fg.wfcdn.com/im/78527195/resize-h800-w800%5Ecompr-r85/4504/45042205/Jambusaria+Vintage+Factory+Coffee+Table.jpg",
-  "description": "Iron and wood couch table is a first-rate example of industrial furniture design. An artful blending of metal and reclaimed wood, this industrial design Jambusaria Vintage Factory Cart Coffee Table will be the centerpiece of any room.",
-  "supplier_id" : 1
+  "description": "Iron and wood couch table is a first-rate example of industrial furniture design.",
+  "supplier_id" : 1,
 } 
 
 ###
@@ -45,6 +45,20 @@ Content-Type: application/json
   "email": "alidepot@info.com",
   "phone_number": "222-333-4444"
 }
+
+###
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Val Martin",
+  "email": "valmartin@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+
 
 
 
