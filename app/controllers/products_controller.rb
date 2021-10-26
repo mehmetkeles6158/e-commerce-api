@@ -1,10 +1,12 @@
 class ProductsController < ApplicationController
 
   def index
-
+    if current_user
     p_all = Product.all
-    # render json:p_all.as_json(methods:[:is_discounted?,:tax,:total])
     render json:p_all
+    else
+      render json: {message: "You must be logged in first!"}
+    end
    
   end
 

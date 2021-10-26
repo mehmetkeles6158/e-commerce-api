@@ -1,4 +1,5 @@
 GET http://localhost:3000/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUyOTE4NTd9.fR-vhBwy5gNIkpsDVyaIWo9NEyt4-x2DPlDgDV7pZRg
 
 ###
 GET http://localhost:3000/products/1
