@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
 
+  before_action :authenticate_admin, only: [:create, :update, :destroy]
+
   def index
     if current_user
     p_all = Product.all

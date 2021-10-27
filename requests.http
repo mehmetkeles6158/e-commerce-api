@@ -1,3 +1,6 @@
+@val = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUzNzk3MjZ9.w2758Rl-VQybpcY8GRGPsTd9H_a6OorQ5iuVBUcjj_w
+@test = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzUzODQ4Njl9.lsZ9KvE523jvUqVw8Qr9WjQEwhVGeiR8uT2lfjj9B84
+
 GET http://localhost:3000/products
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUyOTE4NTd9.fR-vhBwy5gNIkpsDVyaIWo9NEyt4-x2DPlDgDV7pZRg
 
@@ -62,29 +65,30 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "valmartin@test.com",
+  "email": "test@info.com",
   "password": "password"
 }
 
 
 ###
+#order-index
 GET http://localhost:3000/orders
 
 ###
-
+#Order-Show
 GET http://localhost:3000/orders/1
+Authorization: Bearer {{val}}
 
 ###
+#Order-Create
 POST http://localhost:3000/orders
 Content-Type: application/json
+Authorization: Bearer {{val}}
 
 {
-  "user_id" : 1,
   "product_id": 1,
-  "quantity" : 1,
-  "subtotal": 100,
-  "tax":8,
-  "total":108
+  "quantity" : 2
+  
 
 }
 
