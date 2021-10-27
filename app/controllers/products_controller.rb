@@ -4,8 +4,8 @@ class ProductsController < ApplicationController
 
   def index
     if current_user
-    p_all = Product.all
-    render json:p_all
+      products = Product.all
+      render json:products
     else
       render json: {message: "You must be logged in first!"}
     end

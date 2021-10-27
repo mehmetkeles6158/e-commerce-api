@@ -29,11 +29,4 @@ class ApplicationController < ActionController::API
     end
   end
 
-  def authenticate_guest
-    unless current_user && current_user.guest
-      render json: {}, status: :unauthorized
-    end
-  end
-
-
 end

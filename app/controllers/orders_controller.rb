@@ -1,9 +1,6 @@
 class OrdersController < ApplicationController
 
-  before_action :authenticate_user
-  before_action :authenticate_admin
-  before_action :authenticate_guest, only: [:index, :show]
-
+  before_action :authenticate_user, only: [:show, :index, :create]
 
   def index
     if current_user
