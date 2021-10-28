@@ -1,7 +1,7 @@
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU0MzQxMDl9.JkMxlcMm7aQgQcPyHWIf1obT26QkDPUR4jvjPombS2w
 
 GET http://localhost:3000/products
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzUyOTE4NTd9.fR-vhBwy5gNIkpsDVyaIWo9NEyt4-x2DPlDgDV7pZRg
+Authorization: Bearer {{jwt}}
 
 ###
 GET http://localhost:3000/products/1

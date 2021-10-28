@@ -13,11 +13,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-
-    # product = Product.find_by(id:2)
     the_id = params["id"]
     product = Product.find_by(id:the_id)
-    # render json:product.as_json(methods:[:is_discounted?,:tax,:total])
     render json:product
 
   end
