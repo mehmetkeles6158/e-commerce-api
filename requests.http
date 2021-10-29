@@ -1,6 +1,6 @@
 # @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU0MzQxMDl9.JkMxlcMm7aQgQcPyHWIf1obT26QkDPUR4jvjPombS2w
 
-GET http://localhost:3000/products
+GET http://localhost:3000/products?category=home
 # Authorization: Bearer {{jwt}}
 
 ###
