@@ -1,14 +1,14 @@
 class ProductsController < ApplicationController
 
-  before_action :authenticate_admin, only: [:create, :update, :destroy]
+  # before_action :authenticate_admin, only: [:create, :update, :destroy]
 
   def index
-    if current_user
+    # if current_user
       products = Product.all
       render json:products
-    else
-      render json: {message: "You must be logged in first!"}
-    end
+    # else
+      # render json: {message: "You must be logged in first!"}
+    # end
    
   end
 

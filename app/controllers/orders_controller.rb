@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
 
-  before_action :authenticate_user, only: [:show, :index, :create]
+  # before_action :authenticate_user, only: [:show, :index, :create]
 
   def index
     if current_user
@@ -26,19 +26,22 @@ class OrdersController < ApplicationController
 
     product = Product.find_by(id: params[:product_id])
     calculated_subtotal = params[:quantity].to_i * product.price
-    calculated_tax = calculated_subtotal * 0.07
+    calculated_tax = product.tax
     calculated_total = calculated_subtotal + calculated_tax
 
     order = Order.new(
-    user_id: current_user.id,
+    user_id: params[:user_id],
     product_id: product.id,
     quantity: params[:quantity],
     subtotal: calculated_subtotal,
     tax: calculated_tax,
     total: calculated_total
     )
-    order.save
-    render json:order
+    if order.save
+      render json: order
+    else
+      render json: {errors: order.errors.full_messages}
+    end
     
   end
 

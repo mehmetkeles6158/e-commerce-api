@@ -1,7 +1,7 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU0MzQxMDl9.JkMxlcMm7aQgQcPyHWIf1obT26QkDPUR4jvjPombS2w
+# @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU0MzQxMDl9.JkMxlcMm7aQgQcPyHWIf1obT26QkDPUR4jvjPombS2w
 
 GET http://localhost:3000/products
-Authorization: Bearer {{jwt}}
+# Authorization: Bearer {{jwt}}
 
 ###
 GET http://localhost:3000/products/1
@@ -28,17 +28,16 @@ Content-Type: application/json
 ###
 DELETE http://localhost:3000/products/3
 
-
 ###
-
+#Supplier-Index
 GET http://localhost:3000/suppliers
 
 ###
-
+#Supplier-Show
 GET http://localhost:3000/suppliers/1
 
-
 ###
+#Supplier-Create
 POST http://localhost:3000/suppliers
 Content-Type: application/json
 
@@ -49,6 +48,7 @@ Content-Type: application/json
 }
 
 ###
+#User-Signup
 POST http://localhost:3000/users
 Content-Type: application/json
 
@@ -60,6 +60,7 @@ Content-Type: application/json
 }
 
 ###
+#User-Login
 POST http://localhost:3000/sessions
 Content-Type: application/json
 
@@ -70,24 +71,24 @@ Content-Type: application/json
 
 
 ###
-#order-index
+#Order-index
 GET http://localhost:3000/orders
-Authorization: Bearer {{jwt}}
+# Authorization: Bearer {{jwt}}
 
 ###
 #Order-Show
 GET http://localhost:3000/orders/7
-Authorization: Bearer {{jwt}}
+# Authorization: Bearer {{jwt}}
 
 ###
 #Order-Create
 POST http://localhost:3000/orders
 Content-Type: application/json
-Authorization: Bearer {{jwt}}
+# Authorization: Bearer {{jwt}}
 
 {
   "product_id": 6,
-  "quantity" : 3
+  "quantity" : -2
   
 }
 
