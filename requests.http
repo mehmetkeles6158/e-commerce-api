@@ -92,6 +92,21 @@ Content-Type: application/json
   
 }
 
+###
+#Carted_Product Create Action
+POST http://localhost:3000/carted_products
+Content-Type: application/json
+
+{
+  "user_id":2,
+  "product_id": 7,
+  "quantity" : 2,
+  "status": "removed",
+  "order_id": 3
+}
+
+
+
 
 
 
