@@ -1,7 +1,8 @@
-# @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU0MzQxMDl9.JkMxlcMm7aQgQcPyHWIf1obT26QkDPUR4jvjPombS2w
+ @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzU3ODU0MjF9.H9d1hkfyLZnhdViuLwOoulNNg1LGuc2AGMmCP-q6IJ4",
+  "email": "cylelarin@test.com
 
 GET http://localhost:3000/products?category=tech
-# Authorization: Bearer {{jwt}}
+Authorization: Bearer {{jwt}}
 
 ###
 GET http://localhost:3000/products/1
@@ -65,7 +66,7 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "test@info.com",
+  "email": "cylelarin@test.com",
   "password": "password"
 }
 
@@ -73,12 +74,12 @@ Content-Type: application/json
 ###
 #Order-index
 GET http://localhost:3000/orders
-# Authorization: Bearer {{jwt}}
+Authorization: Bearer {{jwt}}
 
 ###
 #Order-Show
 GET http://localhost:3000/orders/7
-# Authorization: Bearer {{jwt}}
+Authorization: Bearer {{jwt}}
 
 ###
 #Order-Create
@@ -96,14 +97,19 @@ Content-Type: application/json
 #Carted_Product Create Action
 POST http://localhost:3000/carted_products
 Content-Type: application/json
+Authorization: Bearer {{jwt}}
 
 {
-  "user_id":2,
+  "user_id":3,
   "product_id": 7,
-  "quantity" : 2,
+  "quantity" : 1,
   "status": "removed",
   "order_id": 3
 }
+
+###
+#Carted_Product Destroy Action
+DELETE http://localhost:3000/carted_products/1
 
 
 
