@@ -13,8 +13,7 @@ class CartedProductsController < ApplicationController
       user_id: current_user.id,
       product_id: params[:product_id],
       quantity: params[:quantity],
-      status: "carted",
-      order_id: nil
+      status: "carted"
     )
     carted_product.save
     render json: carted_product

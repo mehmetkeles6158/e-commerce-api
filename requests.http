@@ -1,4 +1,5 @@
- @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2MzU3ODU0MjF9.H9d1hkfyLZnhdViuLwOoulNNg1LGuc2AGMmCP-q6IJ4",
+ @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU4OTYxOTd9.oK9nJz9_ozkJkCMTsgvn14S2XJUjgiVFhobD6d3Rnmg
+  "email": "souza@info.com
   "email": "cylelarin@test.com
 
 GET http://localhost:3000/products?category=tech
@@ -66,7 +67,7 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "cylelarin@test.com",
+  "email": "souza@info.com",
   "password": "password"
 }
 
@@ -100,10 +101,9 @@ Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "user_id":3,
   "product_id": 7,
   "quantity" : 1,
-  "status": "removed",
+  "status": "carted",
   "order_id": 3
 }
 

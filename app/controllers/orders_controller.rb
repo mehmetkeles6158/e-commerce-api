@@ -27,22 +27,20 @@ class OrdersController < ApplicationController
     carted_products = CartedProduct.where(id: current_user.id)
 
     order_tax = 0
-    order_total = 0
+    order_subtotal = 0
     carted_products.each do|carted_product|
       order_subtotal += carted_product.product.price * carted_product.quantity
       order_tax += carted_product.product.tax * carted_product.quantity
     end
 
-    # calculated_subtotal = params[:quantity].to_i * product.price
-    # calculated_tax = product.tax
-    # calculated_total = calculated_subtotal + calculated_tax
-
+    order_total = rder_subtotal + order_tax
     order = Order.new(
     user_id: current_user.id,
     subtotal: order_subtotal,
     tax: order_tax,
-    total: order_subtotal + order_tax
+    total: order_total
     )
+    
     if order.save
       render json: order
     else
