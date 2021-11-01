@@ -24,6 +24,9 @@ class CartedProductsController < ApplicationController
     
     carted_product = CartedProduct.find_by(id: params[:id])
     carted_product.destroy
+    carted_product.update(
+      
+    )
     render json: carted_product
   end
     
