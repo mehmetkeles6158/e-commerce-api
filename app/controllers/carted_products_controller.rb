@@ -1,4 +1,10 @@
 class CartedProductsController < ApplicationController
+
+  def index
+    carted_products = CartedProduct.all
+    render json: carted_products
+  end
+
   def create
 
     product = Product.find_by(id:params[:id])

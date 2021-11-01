@@ -84,14 +84,14 @@ Authorization: Bearer {{jwt}}
 ###
 #Order-Create
 POST http://localhost:3000/orders
-Content-Type: application/json
-# Authorization: Bearer {{jwt}}
+Authorization: Bearer {{jwt}}
 
-{
-  "product_id": 6,
-  "quantity" : -2
-  
-}
+
+
+###
+#Carted_Product Index Action
+GET http://localhost:3000/carted_products
+Authorization: Bearer {{jwt}}
 
 ###
 #Carted_Product Create Action
@@ -110,6 +110,7 @@ Authorization: Bearer {{jwt}}
 ###
 #Carted_Product Destroy Action
 DELETE http://localhost:3000/carted_products/1
+Authorization: Bearer {{jwt}}
 
 
 
