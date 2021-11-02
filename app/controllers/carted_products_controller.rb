@@ -7,7 +7,7 @@ class CartedProductsController < ApplicationController
 
   def create
 
-    product = Product.find_by(id:params[:id])
+    # product = Product.find_by(id:params[:id])
 
     carted_product = CartedProduct.new(
       user_id: current_user.id,
@@ -23,11 +23,11 @@ class CartedProductsController < ApplicationController
   def destroy
     
     carted_product = CartedProduct.find_by(id: params[:id])
-    carted_product.destroy
+    # carted_product.destroy
     carted_product.update(
-      
+      status: "removed"
     )
-    render json: carted_product
+    render json: {message: "The item removed!"}
   end
     
 end

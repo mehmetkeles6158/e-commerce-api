@@ -102,15 +102,15 @@ Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "product_id": 9,
-  "quantity" : 2,
+  "product_id": 6,
+  "quantity" : 5,
   "status": "carted",
-  "order_id": 4
+  "order_id": 5
 }
 
 ###
 #Carted_Product Destroy Action
-DELETE http://localhost:3000/carted_products/1
+DELETE http://localhost:3000/carted_products/4
 Authorization: Bearer {{jwt}}
 
 
