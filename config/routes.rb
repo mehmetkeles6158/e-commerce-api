@@ -8,20 +8,19 @@ Rails.application.routes.draw do
   delete "/products/:id" => "products#destroy"
 
 
-
   get "/suppliers" => "suppliers#index"
   get "/suppliers/:id" => "suppliers#show"
   post "/suppliers" => "suppliers#create"
 
   
-
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
 
 
-  post "/orders" => "orders#create"
-  get "/orders/:id" => "orders#show"
   get "/orders" => "orders#index"
+  get "/orders/:id" => "orders#show"
+  post "/orders" => "orders#create"
+  
 
   get "/carted_products" => "carted_products#index"
   post "/carted_products" => "carted_products#create"

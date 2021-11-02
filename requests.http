@@ -1,4 +1,4 @@
- @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2MzU4OTY4MDV9.Qe8Z2h_33xUx_0Gc2Kvj0e_OGLKdrB6S58Jk1o1o2QE",
+ @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU5NTEyMTN9.CWYCAznkc79xcUUe7Modix8wMA4HHkDnjuavTjqm5Sw"
   "email": "mosalah@info.com
   "email": "souza@info.com
   "email": "cylelarin@test.com
@@ -68,7 +68,7 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "mosalah@info.com",
+  "email": "souza@info.com",
   "password": "password"
 }
 
@@ -80,13 +80,14 @@ Authorization: Bearer {{jwt}}
 
 ###
 #Order-Show
-GET http://localhost:3000/orders/7
+GET http://localhost:3000/orders/12
 Authorization: Bearer {{jwt}}
 
 ###
 #Order-Create
 POST http://localhost:3000/orders
 Authorization: Bearer {{jwt}}
+content-type: application/json
 
 
 
@@ -103,9 +104,8 @@ Authorization: Bearer {{jwt}}
 
 {
   "product_id": 6,
-  "quantity" : 5,
-  "status": "carted",
-  "order_id": 5
+  "quantity" : 10,
+  "status": "carted"
 }
 
 ###

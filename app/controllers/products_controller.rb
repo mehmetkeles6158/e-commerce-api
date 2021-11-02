@@ -1,16 +1,19 @@
 class ProductsController < ApplicationController
 
-  # before_action :authenticate_admin, only: [:create, :update, :destroy]
+  before_action :authenticate_admin, only: [:create, :update, :destroy]
 
   def index
 
-    category = Category.find_by(name: params[:category])
-    # if current_user
-    products = category.products
-    render json:products
-    # else
-      # render json: {message: "You must be logged in first!"}
-    # end
+    # category = Category.find_by(name: params[:category])
+    # # if current_user
+    # products = category.products
+    # render json:products
+    # # else
+    #   # render json: {message: "You must be logged in first!"}
+    # # end
+
+    products = Product.all
+    render json: products
    
   end
 
@@ -32,7 +35,7 @@ class ProductsController < ApplicationController
     if product.save
       render json: product
     else
-      render json: {errors: product.errors.full_messages}
+      render json: {errors: product.errors.full_messages}, status: :unprocessable_entity
     end
     
   end
@@ -48,7 +51,7 @@ class ProductsController < ApplicationController
     if product.save
       render json: product
     else
-      render json: {errors: product.errors.full_messages}
+      render json: {errors: product.errors.full_messages}, status: :unprocessable_entity
     end
     
   end

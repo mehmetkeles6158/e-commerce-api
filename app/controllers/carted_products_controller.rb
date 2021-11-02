@@ -1,7 +1,8 @@
 class CartedProductsController < ApplicationController
 
   def index
-    carted_products = CartedProduct.all
+    # only  the carted products thay have my user id and status carted!
+    carted_products = current_user.carted_products.where(status: "carted")
     render json: carted_products
   end
 
