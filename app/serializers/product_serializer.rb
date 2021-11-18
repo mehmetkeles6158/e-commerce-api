@@ -4,9 +4,4 @@ class ProductSerializer < ActiveModel::Serializer
   has_many :images
   belongs_to :supplier
 
-  # attributes :id, :name, :price, :description
-
-  # has_many :images
-  # belongs_to :supplier
-
 end

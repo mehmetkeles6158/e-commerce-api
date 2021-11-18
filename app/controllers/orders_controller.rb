@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
 
-  before_action :authenticate_admin
+  before_action :authenticate_user
 
   def index
     orders = Order.where(user_id: current_user.id)
@@ -23,7 +23,7 @@ class OrdersController < ApplicationController
       order_subtotal += carted_product.product.price * carted_product.quantity
     end
 
-    tax_rate = 0.09
+    tax_rate = 0.08
     order_tax = order_subtotal * tax_rate
     order_total = order_subtotal + order_tax
     

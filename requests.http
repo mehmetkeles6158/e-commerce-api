@@ -1,7 +1,4 @@
- @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2MzU5NTEyMTN9.CWYCAznkc79xcUUe7Modix8wMA4HHkDnjuavTjqm5Sw"
-  "email": "mosalah@info.com
-  "email": "souza@info.com
-  "email": "cylelarin@test.com
+ @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2MzU5NTgyMzl9.WQgSzipGGRjWDdxgRSL36vCsCAfaEvsxwk1beFO8v1k
 
 GET http://localhost:3000/products?category=tech
 Authorization: Bearer {{jwt}}
@@ -11,13 +8,13 @@ GET http://localhost:3000/products/1
 
 ###
 POST http://localhost:3000/products/
-Content-Type: application/json
+Content-Type: application/json  
 
 {
   "name": "Walnut Drawer",
   "price": 170,
   "description": "Iron and wood couch table is a first-rate example of industrial furniture design.",
-  "supplier_id" : 1,
+  "supplier_id": 1,
 } 
 
 ###
@@ -31,7 +28,8 @@ Content-Type: application/json
 ###
 DELETE http://localhost:3000/products/3
 
-###
+
+### SUPPLIER
 #Supplier-Index
 GET http://localhost:3000/suppliers
 
@@ -50,14 +48,15 @@ Content-Type: application/json
   "phone_number": "222-333-4444"
 }
 
-###
+
+###USER
 #User-Signup
 POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "name": "Cyle Larin",
-  "email": "cylelarin@test.com",
+  "name": "Sherlock Holmes",
+  "email": "sherlockholmes@info.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -68,19 +67,20 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "souza@info.com",
+  "email": "mosalah@info.com",
   "password": "password"
 }
 
 
-###
+
+###ORDER
 #Order-index
 GET http://localhost:3000/orders
 Authorization: Bearer {{jwt}}
 
 ###
 #Order-Show
-GET http://localhost:3000/orders/12
+GET http://localhost:3000/orders/18
 Authorization: Bearer {{jwt}}
 
 ###
@@ -91,7 +91,7 @@ content-type: application/json
 
 
 
-###
+###CARTED_PRODUCT
 #Carted_Product Index Action
 GET http://localhost:3000/carted_products
 Authorization: Bearer {{jwt}}
@@ -103,8 +103,8 @@ Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "product_id": 6,
-  "quantity" : 10,
+  "product_id": 1,
+  "quantity" : 1,
   "status": "carted"
 }
 
