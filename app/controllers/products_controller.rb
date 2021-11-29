@@ -24,12 +24,12 @@ class ProductsController < ApplicationController
 
   end
 
-  def create
+  def create 
     product = Product.new(
       name: params[:name],
       price: params[:price],
       description: params[:description],
-      supplier_id: params[:supplier_id],
+      supplier_id: params[:supplier_id]
     )
 
     if product.save!
